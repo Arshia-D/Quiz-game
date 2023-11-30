@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz Game Setup</title>
+    <link rel="stylesheet" type="text/css" href="Quiz_game.css">
+    <style>
+        .screen {
+            display: none;
+        }
+        .active {
+            display: block;
+        }
+        
+         #scoreboard {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+       
+        .button-container {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Select Number of Players -->
+<div id="selectPlayersScreen" class="screen active">
+    <h2>Select Number of Players</h2>
+    <button onclick="setPlayers(1)">1 Player</button>
+    <button onclick="setPlayers(2)">2 Players</button>
+    <button onclick="setPlayers(3)">3 Players</button>
+    <button onclick="setPlayers(4)">4 Players</button>
+</div>
+
+<!-- Select Quiz Subject -->
+<div id="selectSubjectScreen" class="screen">
+    <h2>Select Quiz Subject</h2>
+    <button onclick="setSubject('HTML')">HTML</button>
+    <button onclick="setSubject('CSS')">CSS</button>
+    <button onclick="setSubject('JS')">JavaScript</button>
+    <br>
+    <button onclick="location.reload()" class="large-button">Take Me to Select Players</button>
+</div>
+
+<!-- Quiz Screen -->
+<div id="quizScreen" class="screen">
+    <div id="currentPlayerInfo">Player 1's turn</div>
+    <h2 id="question">Question</h2>
+    <div id="answers">
+        <!-- Answer buttons will be added here -->
+    </div>
+    <div id="timer">Time left: <span id="timeLeft">30</span></div>
+</div>
+
+<div id="scoreboard" class="screen" style="display: none;"> </div>
+ 
+<div id="reviewContainer" class="screen" style="display: none;"> </div>
+
+<script type="module" src="Quiz_game.js"></script>
+
+<footer>
+    <p>Creater: Arshia Darvish</p>
+</footer>
+
+</body>
+</html>
